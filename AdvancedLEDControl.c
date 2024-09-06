@@ -42,7 +42,7 @@ void updateLEDGroupSettings(struct LEDGroup *group, uint8_t groupState, uint8_t 
         group->leds[ledIndex].color = color;
     }
     else{ //edge case if index of mentioned led is out of range.
-        printf("Index is out of range. Please enter a valid led index.\n");
+        printf("Index is out of range. Please enter a valid LED index.\n");
     }
     
     // Update group-wide settings
@@ -84,7 +84,7 @@ int main() {
     //define your own LEDGroup settings or individual LED settings by using the below format
     /*updateLEDGroupSettings(&declared_LEDGroupName, uint8_t groupState, uint8_t groupBrightness,uint32_t groupColor, 
                                 uint8_t ledIndex,uint8_t state,uint8_t brightness, uint32_t color)*/
-                                
+
     updateLEDGroupSettings(&myLEDGroup, 1, 150, 0xFF00FF, 0, 1, 200, 0xFF0000); // LED 0: ON, brightness 200, color red
     updateLEDGroupSettings(&myLEDGroup, 1, 150, 0xFF00FF, 1, 1, 180, 0x00FF00); // LED 1: ON, brightness 180, color green
     updateLEDGroupSettings(&myLEDGroup, 1, 150, 0xFF00FF, 2, 1, 150, 0x0000FF); // LED 2: ON, brightness 150, color blue
